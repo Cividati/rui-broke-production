@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0b0d">
+  <meta name="description" content="How many times Rui broke production. The official count.">
+  <title>Rui Broke Production Counter</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="largura">
+      <a class="marca" href="#">Rui</a>
+      <span class="versao">Incident report archive</span>
+    </div>
+  </header>
+
+  <main class="largura principal">
+    <section class="hero" aria-labelledby="titulo">
+      <p class="sobretitulo">"Who took down prod?"<br>We know.</p>
+      <h1 id="titulo">How many times has <em class="destaque">Rui</em> broken <em class="destaque">production</em>?</h1>
+      <p class="descricao">The number is fixed. It cannot be changed. It does not need to be changed. The record stands.</p>
+
+      <div class="placa" aria-live="polite">
+        <span id="numero" class="numero">1</span>
+        <span class="rotulo">times <em class="destaque">Rui</em> broke <em class="destaque">production</em></span>
+      </div>
+
+      <div class="acoes">
+        <button class="botao-secundario" type="button" disabled>Increment disabled</button>
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite">This counter is read-only. Some records are too important to touch.</p>
+    </section>
+
+    <section id="history-section" class="painel" aria-labelledby="historico-titulo">
+      <div class="titulo-linha">
+        <div>
+          <p class="sobretitulo">Log</p>
+          <h2 id="historico-titulo">Incident record</h2>
+        </div>
+      </div>
+      <div id="history-list" class="registros">
+        <article class="ocorrencia">
+          <span class="ordem">#1</span>
+          <span class="data">The day it happened</span>
+          <span class="texto">"production"</span>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="largura">
+      <p class="sobretitulo">Final verdict</p>
+      <blockquote>It happened once. That was enough.</blockquote>
+      <p class="fonte">Inspired by Está na Bíblia? · No production environments were harmed in the making of this counter (one was).</p>
+    </div>
+  </footer>
+</body>
+</html>
