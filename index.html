@@ -10,13 +10,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="topo">
-    <div class="largura">
-      <a class="marca" href="#">Rui</a>
-      <span class="versao">Incident report archive</span>
-    </div>
-  </header>
-
   <main class="largura principal">
     <section class="hero" aria-labelledby="titulo">
       <p class="sobretitulo">"Who took down prod?"<br>We know.</p>
@@ -25,11 +18,7 @@
 
       <div class="placa" aria-live="polite">
         <span id="numero" class="numero">1</span>
-        <span class="rotulo">times <em class="destaque">Rui</em> broke <em class="destaque">production</em></span>
-      </div>
-
-      <div class="acoes">
-        <button class="botao-secundario" type="button" disabled>Increment disabled</button>
+        <span class="rotulo">time <em class="destaque">Rui</em> broke <em class="destaque">production</em></span>
       </div>
       <p id="status" class="status" role="status" aria-live="polite">This counter is read-only. Some records are too important to touch.</p>
     </section>
@@ -37,16 +26,9 @@
     <section id="history-section" class="painel" aria-labelledby="historico-titulo">
       <div class="titulo-linha">
         <div>
-          <p class="sobretitulo">Log</p>
-          <h2 id="historico-titulo">Incident record</h2>
+          <p class="sobretitulo">Today</p>
+          <h2 id="historico-titulo" data-today></h2>
         </div>
-      </div>
-      <div id="history-list" class="registros">
-        <article class="ocorrencia">
-          <span class="ordem">#1</span>
-          <span class="data">The day it happened</span>
-          <span class="texto">"production"</span>
-        </article>
       </div>
     </section>
   </main>
@@ -58,5 +40,10 @@
       <p class="fonte">No production environments were harmed in the making of this counter (one was).</p>
     </div>
   </footer>
+
+  <script>
+    const hoje = new Date().toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
+    document.querySelector("[data-today]").textContent = hoje;
+  </script>
 </body>
 </html>
